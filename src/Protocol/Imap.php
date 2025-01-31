@@ -840,6 +840,11 @@ class Imap
             return $response;
         }
 
+        // if there are no messages in the folder, $response is equal to true
+        if ($response === true) {
+            return [];
+        }
+
         foreach ($response as $ids) {
             if ($ids[0] == 'SEARCH') {
                 array_shift($ids);

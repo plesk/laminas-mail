@@ -1,5 +1,5 @@
 {
-    "name": "laminas/laminas-mail",
+    "name": "plesk/laminas-mail",
     "description": "Provides generalized functionality to compose and send both text and MIME-compliant multipart e-mail messages",
     "keywords": [
         "laminas",
@@ -9,7 +9,7 @@
     "abandoned": "symfony/mailer",
     "license": "BSD-3-Clause",
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "^8.0",
         "ext-iconv": "*",
         "laminas/laminas-loader": "^2.9.0",
         "laminas/laminas-mime": "^2.11.0",
