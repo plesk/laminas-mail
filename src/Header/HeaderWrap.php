@@ -10,9 +10,8 @@ use function explode;
 use function extension_loaded;
 use function iconv_mime_decode;
 use function iconv_mime_encode;
-use function imap_mime_header_decode;
-use function imap_utf8;
 use function implode;
+use function mb_decode_mimeheader;
 use function str_contains;
 use function str_pad;
 use function str_starts_with;
@@ -141,7 +140,7 @@ abstract class HeaderWrap
         // imap (unlike iconv) can handle multibyte headers which are splitted across multiple line
         if (self::isNotDecoded($value, $decodedValue) && extension_loaded('imap')) {
             return array_reduce(
-                imap_mime_header_decode(imap_utf8($value)),
+                mb_decode_mimeheader($value),
                 static fn($accumulator, $headerPart) => $accumulator . $headerPart->text,
                 ''
             );
