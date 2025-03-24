@@ -6,13 +6,12 @@
         "mail"
     ],
     "homepage": "https://laminas.dev",
-    "abandoned": "symfony/mailer",
     "license": "BSD-3-Clause",
     "require": {
         "php": "^8.0",
         "ext-iconv": "*",
         "laminas/laminas-loader": "^2.9.0",
-        "laminas/laminas-mime": "^2.11.0",
+        "plesk/laminas-mime": "2.13.0-patch1",
         "laminas/laminas-stdlib": "^3.17.0",
         "laminas/laminas-validator": "^2.31.0",
         "symfony/polyfill-mbstring": "^1.27.0",
