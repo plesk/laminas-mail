@@ -9,3 +9,4 @@
 /test/_files/test.maildir/
 /.phpcs-cache
 /.phpunit.cache/
+composer.lock
